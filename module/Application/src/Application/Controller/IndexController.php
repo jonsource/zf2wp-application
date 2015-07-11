@@ -25,10 +25,11 @@ class IndexController extends AbstractActionController
         $wpdb = $wM->getWpdb();
 
         $default = array(
-            'post_type'         => 'post',
+            'post_type'         => 'mfcc_dog',
             'posts_per_page'    => -1,
             'post_status'       => 'publish',
-            'order'             => 'ASC'
+            'order'             => 'ASC',
+            'category_name'     => 'k-adopci'
         );
 
         $query = new \WP_Query($default);
