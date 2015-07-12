@@ -11,11 +11,13 @@
     "require": {
         "php": ">=5.5",
         "zendframework/zendframework": "~2.5",
-        "mfcc/zf2wp": "dev-master"
+        "mfcc/zf2wp": "dev-master",
+		"johnpbloch/wordpress": "dev-master"
     },
 	"extra": {
-        "installer-paths": {
-            "public/cms": ["johnpbloch/wordpress"]
-        }
+        "wordpress-install-dir": "public/cms"
+    },
+    "scripts": {
+        "post-update-cmd": "Zf2Wp\\Service\\WpdbManager::composerPostUpdate"
     }
 }
